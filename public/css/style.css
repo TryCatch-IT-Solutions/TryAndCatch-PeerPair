@@ -16,6 +16,19 @@ a {
     font-weight: bold;
 }
 
+h1 {
+    font-size: 3rem;
+}
+
+.main {
+    min-height: 100vh;
+    padding: 2rem 2vw;
+}
+
+.main.dark {
+    background-color: #1d0303;
+}
+
 .btn {
     border: none;
     outline: none;
@@ -82,9 +95,129 @@ a {
 }
 
 .navigation-links-container .navigation-link.active {
-    background-color: #8F67FF;   
+    background-color: #8F67FF;
 }
 
 .navigation-links-container .navigation-link:hover {
     background-color: #8F67FF;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 7vw;
+    z-index: 1;
+    background: transparent;
+}
+
+.navbar .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.navbar .logo {
+    display: flex;
+    flex: 1;
+    gap: 16px;
+}
+
+.hero-section {
+    margin: 8rem;
+    display: flex;
+    gap: 16px;
+}
+
+.hero-section .illustration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    max-width: 50vw;
+}
+
+.hero-section .btn.highlight {
+    position: relative;
+    top: 2rem;
+    font-size: 2rem;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    justify-content: center;
+}
+
+.features .feature-item {
+    display: flex;
+    gap: 16px;
+}
+
+.features .feature-item img {
+    width: 100px;
+}
+
+.features .feature-item .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 50vw;
+}
+
+.features .feature-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.card {
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+    padding: 8px;
+    width: 50vw;
+    background-color: white;
+    color: black;
+    box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+}
+
+.form-grid {
+    display: grid;
+    gap: 16px;
+    margin-bottom: 0.75rem;
+}
+
+.form-grid .form-group label {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.form-grid .form-group input {
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    padding: 8px;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+.form-grid.one-col {
+    grid-template-columns: 1fr;
+}
+
+.form-grid.two-col {
+    grid-template-columns: 1fr 1fr;
+}
+
+
+/**
+ Colors
+ */
+.blue {
+    background-color: blue;
 }
