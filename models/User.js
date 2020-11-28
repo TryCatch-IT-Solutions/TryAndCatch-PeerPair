@@ -1,14 +1,6 @@
 const mongoose = require("mongoose");
 
 const UserSchema = new mongoose.Schema({
-    googleId: {
-        type: String,
-        required: true
-    },
-    displayName: {
-        type: String,
-        required: true
-    },
     firstName: {
         type: String,
         required: true
@@ -17,10 +9,11 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    image: {
+    email: {
         type: String,
+        required: true
     },
-    created_at: {
+    joined_at: {
         type: Date,
         default: Date.now
     },

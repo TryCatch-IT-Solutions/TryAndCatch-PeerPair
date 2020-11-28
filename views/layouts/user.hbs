@@ -5,29 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <title>PeerPair - Collaborate. Relate. Educate.</title>
+
+    <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-    {{> _header}}
-    {{> _add_btn}}
-
-    <div class="container">
-        {{{ body }}}
-    </div>
+    {{> _sidenav}}
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.15.1/ckeditor.js" integrity="sha512-aThGT4RJc95+zt2vrs8iMjrFpsJxcFclp7tweVls6/3cNo3GWvGvtLV576o8Kdvdf3fJhrrG3wkmoea/KJMLFQ==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-        M.Sidenav.init(document.querySelector(".sidenav"));
-        M.FormSelect.init(document.querySelector("#status"));
+    <div style="padding-left: 300px;">
+        <div class="header" style="padding: 2rem; display: flex;">
+            <h2 style="flex: 1; margin: 0;">Dashboard</h2>
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <a href="#" style="font-weight: normal; display: flex; justify-content: center; gap: 16px; align-items: center;">John Doe <i style="margin-left: 8px;" class="fas fa-chevron-down"></i></a>
+            </div>
+        </div>
 
-        CKEDITOR.replace('body', {
-            plugins: 'wysiwygarea, toolbar, basicstyles, link'
-        });
-        
-    </script>
+        <div>
+            {{{body}}}
+        </div>
+    </div>
 </body>
 </html>

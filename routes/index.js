@@ -10,9 +10,17 @@ router.get('/', ensureGuest, (req, res) => {
     res.render("index", {layout: 'main'});
 });
 
+router.get('/setup', (req, res) => {
+    res.render("setup", {layout: "main"});
+});
+
+router.get('/dashboard', (req, res) => {
+    res.render('dashboard', {layout: "user"})
+});
+
 // @desc        Dashboard
 // @route       GET /dashboard
-router.get('/dashboard', ensureAuth, async (req, res) => {
+/* router.get('/dashboard', ensureAuth, async (req, res) => {
     try {
         const stories = await Story.find({ user: req.user.id }).lean();
 
@@ -24,6 +32,6 @@ router.get('/dashboard', ensureAuth, async (req, res) => {
         console.error(err);
         res.render("error/500");
     }
-});
+}); */
 
 module.exports = router;

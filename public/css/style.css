@@ -1,22 +1,90 @@
-p {
-    margin: 10px 0 !important;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
 }
 
-.login-container {
-    width: 400px;
-    margin-top: 50px;
-    text-align: center;
+html {
+    background-color: #0F0333;
+    color: white;
 }
 
-.fa-small {
-    font-size: 16px !important;
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
 }
 
-.btn-float {
-    float: left;
-    margin-right: 16px;
+.btn {
+    border: none;
+    outline: none;
+    background-color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
 }
 
-.img-small {
-    width: 180px;
+.btn.btn-outline {
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+.btn.btn-success {
+    background-color: #88CC86;
+    color: white;
+}
+
+.custom-select {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+.sidenav {
+    width: 300px;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #291B50;
+}
+
+.sidenav .sidenav-head {
+    width: 100%;
+    height: auto;
+    background-color: #7663AE;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.sidenav .sidenav-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation-links-container {
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation-links-container .navigation-link {
+    padding: 16px;
+    display: flex;
+    gap: 8px;
+    font-size: 1.25rem;
+    align-items: center;
+}
+
+.navigation-links-container .navigation-link.active {
+    background-color: #8F67FF;   
+}
+
+.navigation-links-container .navigation-link:hover {
+    background-color: #8F67FF;
 }
